@@ -597,7 +597,11 @@ def comparision_tab():
 
             st.markdown(f'##### :blue[Car models under each type for {brand_1}]')
 
-            st.write(dict(plot_1.groupby('car_model').grade.nunique()))
+            grade_counts = dict(plot_1.groupby('car_model')['grade'].nunique())
+            grade_counts = {k: int(v) for k, v in grade_counts.items()}
+            st.write(grade_counts)
+            
+            # st.write(dict(plot_1.groupby('car_model').grade.nunique()))
 
 
             
@@ -635,8 +639,11 @@ def comparision_tab():
             st.markdown('------------------------------------')
 
             st.markdown(f'##### :red[Car models under each type for {brand_2}]')
-
-            st.write(dict(plot_2.groupby('car_model').grade.nunique()))
+            
+            grade_counts = dict(plot_1.groupby('car_model')['grade'].nunique())
+            grade_counts = {k: int(v) for k, v in grade_counts.items()}
+            st.write(grade_counts)
+            # st.write(dict(plot_2.groupby('car_model').grade.nunique()))
 
         st.markdown('----------------------------')
 
@@ -907,5 +914,6 @@ def other_page():
 
 if __name__ == "__main__":
     main()
+
 
 
