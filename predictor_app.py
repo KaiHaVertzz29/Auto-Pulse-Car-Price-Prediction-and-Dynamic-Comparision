@@ -112,11 +112,11 @@ def home_page():
     #     dtree_price_predictor=pickle.load(file)
 
 
-    car_data=pd.read_csv('https://github.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/blob/main/car_data.csv')
+    car_data=pd.read_csv('https://raw.githubusercontent.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/main/car_data.csv')
 
-    by_brand=pd.read_csv('https://github.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/blob/main/by_brand.csv')
+    by_brand=pd.read_csv('https://raw.githubusercontent.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/main/by_brand.csv')
 
-    logo_links=pd.read_csv('https://github.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/blob/main/car_logos.csv')
+    logo_links=pd.read_csv('https://raw.githubusercontent.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/main/car_logos.csv')
 
     model_data=car_data[['origin','condition','car_model','mileage','exterior_color',
                 'interior_color','seating_capacity','transmission',
@@ -242,16 +242,16 @@ def data_visualized():
              Visual Insigts Of Our Datset
                 ''')
     
-    car_data=pd.read_csv('https://github.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/blob/main/car_data.csv')
+    car_data=pd.read_csv('https://raw.githubusercontent.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/main/car_data.csv')
     
     req_data=car_data[['origin','condition','car_model','mileage','exterior_color',
                 'interior_color','seating_capacity','transmission',
                 'drive_type','price_dollars','engine_type','engine_capacity','year_of_manufacture',
                 'brand_code','brand_grade','brand','grade']]
     
-    by_brand=pd.read_csv('https://github.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/blob/main/by_brand.csv')
+    by_brand=pd.read_csv('https://raw.githubusercontent.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/main/by_brand.csv')
     
-    logo_links=pd.read_csv('https://github.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/blob/main/car_logos.csv')
+    logo_links=pd.read_csv('https://raw.githubusercontent.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/main/car_logos.csv')
 
 
     st.markdown('* :red[Select variables from below bar to get visualized insights]')
@@ -473,7 +473,7 @@ def data_visualized():
 
 def comparision_tab():
 
-    car_data=pd.read_csv('https://github.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/blob/main/car_data.csv')
+    car_data=pd.read_csv('https://raw.githubusercontent.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/main/car_data.csv')
 
     price_ranges = [0, 30000, 60000, 100000, 200000, float('inf')]
     labels = ['Entry-Level', 'Mid-Range', 'Premium/Executive', 'Luxury/High-End', 'Ultra-Luxury/Exotic']
@@ -733,7 +733,7 @@ def comparision_tab():
 
 def download_page():
 
-    car_data=pd.read_csv('https://github.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/blob/main/car_data.csv')
+    car_data=pd.read_csv('https://raw.githubusercontent.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/main/car_data.csv')
     st.title('Car Data Visualization App')
     car_data.drop(columns=['Unnamed: 0','ad_id'],inplace=True)
     price_ranges = [0, 30000, 60000, 100000, 200000, float('inf')]
@@ -823,7 +823,7 @@ def download_page():
 def other_page():
 
     # Load car_data from CSV file
-    car_data = pd.read_csv('https://github.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/blob/main/car_data.csv')
+    car_data = pd.read_csv('https://raw.githubusercontent.com/KaiHaVertzz29/Auto-Pulse-Car-Price-Prediction-and-Dynamic-Comparision/main/car_data.csv')
     st.title('Brand and Model Comparison Page')
 
     # Set Seaborn theme for better aesthetics
@@ -907,4 +907,5 @@ def other_page():
 
 if __name__ == "__main__":
     main()
+
 
