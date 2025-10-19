@@ -18,7 +18,7 @@ import seaborn as sns
 import plost
 import os
 import gdown
-st.set_option('deprecation.showPyplotGlobalUse', False)
+# st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
     st.set_page_config(layout="wide")
@@ -907,3 +907,4 @@ def other_page():
 
 if __name__ == "__main__":
     main()
+
